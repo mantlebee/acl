@@ -1,0 +1,43 @@
+{
+  "name": "@mantlebee/acl",
+  "version": "1.0.0",
+  "description": "(Web) Application Common Library - Implementing TCL.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build:watch": "webpack --watch",
+    "doc": "typedoc --mode file --out docs src",
+    "test": "mocha --require ts-node/register test/**/*.spec.ts",
+    "test:watch": "mocha --require ts-node/register test/**/*.spec.ts --extension ts --watch src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mantlebee/acl.git"
+  },
+  "keywords": [
+    "mantlebee",
+    "typescript"
+  ],
+  "author": "MantleBee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mantlebee/acl/issues"
+  },
+  "homepage": "https://github.com/mantlebee/acl#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "ts-loader": "^6.0.4",
+    "ts-node": "^8.3.0",
+    "typedoc": "^0.15.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "@mantlebee/tcl": "^1.0.4"
+  }
+}

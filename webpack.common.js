@@ -1,25 +1,17 @@
 const path = require("path");
 
 // Configuration
-const mode = "development";
-const entry = {
-  app: "./src/index.ts"
-};
-const filename = "[name].bundle.js";
-const outdir = "dist";
+const entry = "./src/index.ts";
+const filename = "index.js";
+const outdir = "./dist";
 
 // Module
 module.exports = {
-  mode,
   entry,
-  devtool: "inline-source-map",
-  devServer: {
-    contentBase: outdir
-  },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts$/,
         use: "ts-loader",
         exclude: /node_modules/
       }

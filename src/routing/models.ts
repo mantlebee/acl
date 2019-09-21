@@ -1,7 +1,7 @@
-//import { List } from "@mantlebee/tcl";
-//import { IRouter, IRoute } from "./interfaces";
+// import { List } from "@mantlebee/tcl";
+// import { IRouter, IRoute } from "./interfaces";
 
-//export class Router implements IRouter {
+// export class Router implements IRouter {
 //  private readonly _router: IRouter;
 //  private _stack: List<IRoute>;
 //  private _index: number;

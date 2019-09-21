@@ -1,8 +1,8 @@
+import { IRoute, RoutesConfigFactory } from "@/routing";
+import { List, NotImplementedException } from "@mantlebee/tcl";
+import { IConverter } from "@vesenda/tcl";
 import { expect } from "chai";
 import { describe, it } from "mocha";
-import { List, IConverter, notImplemented } from "@mantlebee/tcl";
-import { RoutesConfigFactory } from "@/routing";
-import { IRoute } from "@/routing";
 
 const namespace = "acl/routing/factories";
 
@@ -18,7 +18,7 @@ describe(namespace, () => {
         return toRoutes;
       },
       convertBack(toRoutes: List<ConvertedRoute>) {
-        return notImplemented();
+        throw NotImplementedException();
       }
     };
     it("All routes must be converted correctly", () => {

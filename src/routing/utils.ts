@@ -1,5 +1,4 @@
 /** @module @mantlebee/acl/routing */
-
 import { IRoute } from "./interfaces";
 
 /**

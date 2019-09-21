@@ -1,3 +1,7 @@
+# MantleBee
+dist/
+docs/
+
 # Logs
 logs
 *.log

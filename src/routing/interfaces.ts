@@ -1,6 +1,5 @@
 /** @module @mantlebee/acl/routing */
-
-import { List } from "@mantlebee/tcl";
+import { List } from "../../tcl";
 
 /**
  * Application route usable by Javascript frameworks, converting it via [[RoutesConfigFactory]].

@@ -1,7 +1,6 @@
+import { IRoute, RoutesPool } from "@/routing";
 import { expect } from "chai";
 import { beforeEach, describe, it } from "mocha";
-import { RoutesPool } from "./pools";
-import { IRoute } from "./interfaces";
 
 const namespace = "acl/routing/pools";
 

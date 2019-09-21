@@ -1,7 +1,6 @@
+import { IRoute, isNamedRoute } from "@/routing";
 import { expect } from "chai";
 import { describe, it } from "mocha";
-import { IRoute } from "./interfaces";
-import { isNamedRoute } from "./utils";
 
 const namespace = "acl/routing/utils";
 
@@ -14,6 +13,10 @@ describe(namespace, () => {
     it("name property of named routes can't be empty", () => {
       const route: IRoute = { path: "/home", name: "" };
       expect(isNamedRoute(route)).to.be.false;
+    });
+    it("name routes must have a valid name", () => {
+      const route: IRoute = { path: "/home", name: "home" };
+      expect(isNamedRoute(route)).to.be.true;
     });
   });
 });

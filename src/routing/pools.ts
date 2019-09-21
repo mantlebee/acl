@@ -1,6 +1,6 @@
 /** @module @mantlebee/acl/routing */
+import { List } from "../../tcl";
 
-import { List, Nullable } from "@mantlebee/tcl";
 import { IRoute } from "./interfaces";
 import { isNamedRoute } from "./utils";
 
@@ -9,12 +9,7 @@ import { isNamedRoute } from "./utils";
  * */
 export class RoutesPool {
   private static _routes: List<IRoute> = [];
-  public static getAllRoutes(): List<IRoute> {
-    return RoutesPool._routes;
-  }
-  public static getNamedRoutes(): List<IRoute> {
-    return RoutesPool._routes.filter(a => isNamedRoute(a));
-  }
+
   public static addRoute(route: IRoute): void {
     RoutesPool._routes.push(route);
   }
@@ -23,5 +18,11 @@ export class RoutesPool {
   }
   public static clearRoutes(): void {
     RoutesPool._routes = [];
+  }
+  public static getAllRoutes(): List<IRoute> {
+    return RoutesPool._routes;
+  }
+  public static getNamedRoutes(): List<IRoute> {
+    return RoutesPool._routes.filter(a => isNamedRoute(a));
   }
 }
